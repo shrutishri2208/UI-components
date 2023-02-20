@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="-10 -10 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="arrow-container-3">
+    <g id="arrow2">
+        <line id="Line1" x1="29.5221" y1="2.69186" x2="69.9703" y2="36.6319" stroke="red" stroke-width="10" stroke-linecap="round" className="bg-green-500"/>
+        <!-- <line id="Line3" x1="3.52208" y1="2.69186" x2="43.9703" y2="36.6319" stroke="white" stroke-width="10" stroke-linecap="round"/>
+        <line id="Line2" x1="30.1977" y1="71.5053" x2="70.6459" y2="37.5652" stroke="green" stroke-width="10" stroke-linecap="round"/>
+        <line id="Line4" x1="4.19767" y1="71.5053" x2="44.6459" y2="37.5652" stroke="blue" stroke-width="10" stroke-linecap="round"/> -->
+    </g>
+</svg>
