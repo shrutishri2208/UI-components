@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as Arrow1SVG } from "./arrow1.svg";
 import { ReactComponent as Arrow2SVG } from "./arrow2.svg";
 import { ReactComponent as Arrow3SVG } from "./arrow3.svg";
+import { ReactComponent as Arrow4SVG } from "./arrow4.svg";
 
 const loaderTime = 4000;
 
@@ -15,12 +16,13 @@ const Arrow1 = () => {
           <Arrow2SVG />
         </div>
       </div>
-      {/* <div className="px-8">
+      <div className="px-8">
         <h1 className="mb-4">Arrows on Hover - 2</h1>
         <div className="grid grid-cols-2">
           <Arrow3SVG />
+          <Arrow4SVG />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

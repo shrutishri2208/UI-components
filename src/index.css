@@ -184,22 +184,46 @@ code {
 
 #Polygon1 {
   translate: -100% 0%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 #Polygon2 {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 #Polygon3 {
   translate: 15% 0%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.arrow-container-3:hover #Line1 {
-  transform: rotate(90deg);
+.line-arrow-1 {
+  stroke: white;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+.line-arrow-2 {
+  stroke: white;
+  cursor: pointer;
+}
+#Line1,
+#arrow {
+  transition: all 0.5s;
 }
 #Line1 {
-  transform-origin: 100% 100%;
-  animation: arrow-line 5s linear infinite;
+  opacity: 0;
+}
+
+.line-arrow-1:hover #Line1 {
+  transform: translate(40%, 0%);
+  opacity: 1;
+}
+.line-arrow-1:hover #arrow {
+  transform: translate(7%, 0%);
+}
+.line-arrow-2:hover #Line1 {
+  transform: translate(40%, 0%);
+  opacity: 1;
+}
+.line-arrow-2:hover #arrow {
+  transform: translate(7%, 0%);
 }
 
 @keyframes arrow-line {
