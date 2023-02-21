@@ -1,14 +1,13 @@
 import React from "react";
+import Loader1 from "./Loader1";
+import Loader2 from "./Loader2";
 
-const Loader = ({ isClicked }) => {
+const Loader = () => {
   return (
-    <svg
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`loader ${isClicked && "loader-open"}`}
-    >
-      <circle cx="50" cy="50" r="36" />
-    </svg>
+    <div className="border-2 rounded-lg m-8 p-8 grid grid-cols-2">
+      <Loader1 />
+      <Loader2 />
+    </div>
   );
 };
 

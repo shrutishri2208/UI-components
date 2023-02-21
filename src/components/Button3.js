@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Loader from "./Loader";
+import LoaderSVG from "./LoaderSVG";
 
 const Button3 = ({ loaderTime }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -18,7 +18,7 @@ const Button3 = ({ loaderTime }) => {
   return (
     <div className=" flex justify-center">
       <button className="relative sub-btn-1 flex-col" onClick={openLoader}>
-        {isClicked && <Loader isClicked={isClicked} />}
+        {isClicked && <LoaderSVG isClicked={isClicked} />}
         <span className="ml-2 mb-0.5">SUBMIT</span>
       </button>
     </div>

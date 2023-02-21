@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "./components/Arrow";
+import Loader from "./components/Loader";
 import Submit1 from "./components/Submit1";
 import Submit2 from "./components/Submit2";
 import Submit3 from "./components/Submit3";
@@ -16,6 +17,7 @@ function App() {
         <Submit4 />
         <Arrow />
         <Toggle />
+        <Loader />
       </div>
     </div>
   );

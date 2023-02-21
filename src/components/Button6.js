@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Rectangle from "./Rectangle";
+import Rectangle from "./RectangleSVG";
 
 const Button6 = ({ loaderTime }) => {
   const [isClicked, setIsClicked] = useState(false);

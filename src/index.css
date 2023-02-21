@@ -3,11 +3,14 @@
 @tailwind components;
 
 :root {
-  --animation-time: 4s;
+  --loader-time: 4s;
+  --loader-time-2: 3s;
   --body-bg-clr: #131313;
   --text-clr: #aeaeae;
   --radial-gradient-1: #1e1e1e;
   --radial-gradient-2: #000000;
+  --primary: rgba(255, 250, 209, 0.4);
+  --secondary: rgba(255, 44, 143, 0.4);
 
   --shadow-clr: #2f2f2f;
 }
@@ -32,6 +35,9 @@ code {
   margin: auto;
   max-width: 50rem;
 }
+/*********************************************************************/
+
+/*Loader on Click - 1 */
 
 .sub-btn-1 {
   display: flex;
@@ -46,9 +52,38 @@ code {
     var(--radial-gradient-2)
   );
   border-radius: 10rem;
-  /* box-shadow: 0px 0px 10px 1px var(--shadow-clr); */
   transition: all 1s linear;
 }
+
+.loader {
+  stroke-dasharray: 230;
+  stroke-dashoffset: 0;
+  fill: none;
+  stroke: var(--text-clr);
+  stroke-width: 0.8rem;
+  height: 0px;
+  height: 0px;
+  animation: loader var(--loader-time) linear infinite, display 0.2s linear;
+  transition: all 1s;
+}
+
+@keyframes loader {
+  0% {
+    stroke-dashoffset: 230;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loader-open {
+  height: 30px;
+  width: 30px;
+}
+
+/**********************************************************************/
+
+/*Loader on Click - 2*/
 .sub-btn-2 {
   letter-spacing: 0.3rem;
   font-size: 1.2rem;
@@ -63,23 +98,47 @@ code {
   );
 }
 
-.sub-btn-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.3rem;
-  font-size: 1.2rem;
-  margin: 0.6rem;
-  padding: 1rem 1.6rem;
-  background: radial-gradient(
-    var(--radial-gradient-1),
-    var(--radial-gradient-2)
-  );
-  border-radius: 10rem;
-  transition: all 1s linear;
-  overflow: hidden;
+.rectangle {
+  opacity: 1;
+  fill: none;
+  stroke-width: 0.3rem;
+  stroke-dasharray: 220;
 }
-.sub-btn-4 {
+
+.rect-1 {
+  animation: rect1 var(--loader-time) linear infinite;
+}
+
+.rect-2 {
+  animation: rect2 var(--loader-time) linear infinite;
+}
+
+@keyframes rect1 {
+  0% {
+    stroke: var(--text-clr);
+    stroke-dashoffset: 220;
+  }
+  100% {
+    stroke: var(--text-clr);
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes rect2 {
+  0% {
+    stroke: var(--text-clr);
+    stroke-dashoffset: -220;
+  }
+  100% {
+    stroke: var(--text-clr);
+    stroke-dashoffset: 0;
+  }
+}
+
+/**********************************************************************/
+
+/*Loader on Click - 3*/
+
+.sub-btn-3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,6 +164,37 @@ code {
   animation: line-loader 4s linear infinite;
 }
 
+@keyframes line-loader {
+  0% {
+    transform: translate(0, 40%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/**********************************************************************/
+
+/*Loader on Click - 4*/
+
+.sub-btn-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.3rem;
+  font-size: 1.2rem;
+  margin: 0.6rem;
+  padding: 1rem 1.6rem;
+  background: radial-gradient(
+    var(--radial-gradient-1),
+    var(--radial-gradient-2)
+  );
+  border-radius: 10rem;
+  transition: all 1s linear;
+  overflow: hidden;
+}
+
 .bg-wave-loader-1 {
   position: absolute;
   opacity: 0.2;
@@ -123,37 +213,31 @@ code {
   animation: wave-loader-2 5s linear infinite;
 }
 
-.loader {
-  stroke-dasharray: 230;
-  stroke-dashoffset: 0;
-  fill: none;
-  stroke: var(--text-clr);
-  stroke-width: 0.8rem;
-  height: 0px;
-  height: 0px;
-  animation: loader var(--animation-time) linear infinite, display 0.2s linear;
-  transition: all 1s;
-}
+@keyframes wave-loader-1 {
+  0% {
+    translate: 0% 90%;
+    rotate: 0deg;
+  }
 
-.loader-open {
-  height: 30px;
-  width: 30px;
+  100% {
+    translate: 0% -20%;
+    rotate: 360deg;
+  }
 }
+@keyframes wave-loader-2 {
+  0% {
+    translate: 0% 90%;
+    rotate: 30deg;
+  }
 
-.rectangle {
-  opacity: 1;
-  fill: none;
-  stroke-width: 0.3rem;
-  stroke-dasharray: 220;
+  100% {
+    translate: 0% -20%;
+    rotate: 390deg;
+  }
 }
+/******************************************************************************/
 
-.rect-1 {
-  animation: rect1 var(--animation-time) linear infinite;
-}
-
-.rect-2 {
-  animation: rect2 var(--animation-time) linear infinite;
-}
+/*Arrows on Hover - 1*/
 
 .arrow-container-1 {
   cursor: pointer;
@@ -194,6 +278,10 @@ code {
   transition: all 0.5s;
 }
 
+/****************************************************************************/
+
+/*Arrows on Hover - 2*/
+
 .line-arrow-1 {
   stroke: white;
   cursor: pointer;
@@ -226,6 +314,10 @@ code {
   transform: translate(7%, 0%);
 }
 
+/************************************************************************************************/
+
+/*Toggle - 1*/
+
 .sVisible {
   opacity: 1;
 }
@@ -246,6 +338,10 @@ code {
   transition: all 0.5s;
 }
 
+/***************************************************************************************/
+
+/*Toggle - 2*/
+
 .stateTrue {
   animation: stateTrue 0.5s linear;
   animation-fill-mode: forwards;
@@ -253,38 +349,6 @@ code {
 .stateFalse {
   animation: stateFalse 0.5s linear;
   animation-fill-mode: forwards;
-}
-
-.white {
-  animation: white 0.5s linear;
-  animation-fill-mode: forwards;
-}
-.black {
-  animation: black 0.5s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes white {
-  0% {
-    fill: black;
-  }
-  50% {
-    fill: black;
-  }
-  100% {
-    fill: white;
-  }
-}
-@keyframes black {
-  0% {
-    fill: white;
-  }
-  50% {
-    fill: white;
-  }
-  100% {
-    fill: black;
-  }
 }
 @keyframes stateTrue {
   0% {
@@ -314,81 +378,197 @@ code {
   }
 }
 
-@keyframes arrow-line {
+.white {
+  animation: white 0.5s linear;
+  animation-fill-mode: forwards;
+}
+.black {
+  animation: black 0.5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes white {
   0% {
+    fill: black;
+  }
+  50% {
+    fill: black;
+  }
+  100% {
+    fill: white;
+  }
+}
+@keyframes black {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: white;
+  }
+  100% {
+    fill: black;
+  }
+}
+
+/**************************************************************************************/
+
+/*Loader - 1*/
+
+.shape1 {
+  height: 5rem;
+  width: 5rem;
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+
+  border-radius: 60% 90% 50% 70% / 60% 70% 70% 90%;
+  animation: morph1 3s linear infinite backwards;
+}
+@keyframes morph1 {
+  0% {
+    border-radius: 60% 90% 50% 70% / 60% 70% 70% 90%;
     transform: rotate(0deg);
+    transform: translate(5%, 5%);
+  }
+  50% {
+    border-radius: 60% 70% 70% 90% / 60% 90% 50% 70%;
+    transform: translate(10%, 10%);
   }
   100% {
+    border-radius: 60% 90% 50% 70% / 60% 70% 70% 90%;
     transform: rotate(360deg);
+    transform: translate(5%, 5%);
+  }
+}
+.shape2 {
+  height: 5rem;
+  width: 5rem;
+  background: linear-gradient(60deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 70% 50% 90% 60% / 90% 50% 80% 60%;
+  animation: morph2 6s linear infinite backwards;
+}
+@keyframes morph2 {
+  0% {
+    border-radius: 70% 50% 90% 60% / 90% 50% 80% 60%;
+    transform: rotate(0deg);
+    transform: translate(-10%, 10%);
+  }
+  50% {
+    border-radius: 90% 60% 80% 70% / 90% 70% 80% 60%;
+    transform: translate(10%, 10%);
+  }
+  100% {
+    border-radius: 70% 50% 90% 60% / 90% 50% 80% 60%;
+    transform: rotate(360deg);
+    transform: translate(-10%, 10%);
+  }
+}
+.shape3 {
+  height: 5rem;
+  width: 5rem;
+  background: linear-gradient(230deg, var(--primary) 0%, var(--secondary) 100%);
+  border-radius: 100% 80% 70% 50% / 80% 90% 50% 60%;
+  animation: morph3 5s linear infinite backwards;
+}
+@keyframes morph3 {
+  0% {
+    border-radius: 100% 80% 70% 50% / 80% 90% 50% 60%;
+    transform: rotate(0deg);
+    transform: translate(-10%, 0%);
+  }
+  50% {
+    border-radius: 90% 90% 60% 80% / 80% 60% 60% 90%;
+    transform: translate(0%, 10%);
+  }
+  100% {
+    border-radius: 100% 80% 70% 50% / 80% 90% 50% 60%;
+    transform: rotate(-360deg);
+    transform: translate(-10%, 0%);
   }
 }
 
-@keyframes rect1 {
-  0% {
-    stroke: var(--text-clr);
-    stroke-dashoffset: 220;
-  }
-  100% {
-    stroke: var(--text-clr);
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes rect2 {
-  0% {
-    stroke: var(--text-clr);
-    stroke-dashoffset: -220;
-  }
-  100% {
-    stroke: var(--text-clr);
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes loader {
-  0% {
-    stroke-dashoffset: 230;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes display {
-  0% {
-    height: 0px;
-    width: 0px;
-  }
-  100% {
-    height: 30px;
-    width: 30px;
-  }
-}
-@keyframes line-loader {
-  0% {
-    transform: translate(0, 40%);
-  }
+/************************************************************************************************/
 
+/*Loader - 2 */
+
+.ldr2c1 {
+  animation: loaderCircle1 var(--loader-time-2) linear infinite;
+}
+@keyframes loaderCircle1 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(43%, 0%);
+  }
+  50% {
+    transform: translate(43%, 43%);
+  }
+  75% {
+    transform: translate(0%, 43%);
+  }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0%, 0%);
   }
 }
-@keyframes wave-loader-1 {
-  0% {
-    translate: 0% 90%;
-    rotate: 0deg;
-  }
 
+.ldr2c2 {
+  animation: loaderCircle2 var(--loader-time-2) linear infinite;
+}
+
+@keyframes loaderCircle2 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(0%, 43%);
+  }
+  50% {
+    transform: translate(-43%, 43%);
+  }
+  75% {
+    transform: translate(-43%, 0%);
+  }
   100% {
-    translate: 0% -20%;
-    rotate: 360deg;
+    transform: translate(0%, 0%);
   }
 }
-@keyframes wave-loader-2 {
-  0% {
-    translate: 0% 90%;
-    rotate: 30deg;
-  }
+.ldr2c3 {
+  animation: loaderCircle3 var(--loader-time-2) linear infinite;
+}
 
+@keyframes loaderCircle3 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(0%, -43%);
+  }
+  50% {
+    transform: translate(43%, -43%);
+  }
+  75% {
+    transform: translate(43%, 0%);
+  }
   100% {
-    translate: 0% -20%;
-    rotate: 390deg;
+    transform: translate(0%, 0%);
+  }
+}
+.ldr2c4 {
+  animation: loaderCircle4 var(--loader-time-2) linear infinite;
+}
+
+@keyframes loaderCircle4 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  25% {
+    transform: translate(-43%, 0%);
+  }
+  50% {
+    transform: translate(-43%, -43%);
+  }
+  75% {
+    transform: translate(0%, -43%);
+  }
+  100% {
+    transform: translate(0%, 0%);
   }
 }
