@@ -4,6 +4,7 @@ import Submit1 from "./components/Submit1";
 import Submit2 from "./components/Submit2";
 import Submit3 from "./components/Submit3";
 import Submit4 from "./components/Submit4";
+import Toggle from "./components/Toggle";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Submit3 />
         <Submit4 />
         <Arrow />
+        <Toggle />
       </div>
     </div>
   );
