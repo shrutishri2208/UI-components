@@ -15,9 +15,9 @@ function App() {
         <Submit2 />
         <Submit3 />
         <Submit4 />
+        <Loader />
         <Arrow />
         <Toggle />
-        <Loader />
       </div>
     </div>
   );

@@ -488,87 +488,44 @@ code {
 
 /*Loader - 2 */
 
-.ldr2c1 {
-  animation: loaderCircle1 var(--loader-time-2) linear infinite;
+.loader2 {
+  animation: loader2 3s linear infinite alternate;
 }
-@keyframes loaderCircle1 {
+
+@keyframes loader2 {
   0% {
-    transform: translate(0%, 0%);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader2rect {
+  fill: var(--body-bg-clr);
+  animation: loader2rect 3s linear infinite;
+}
+@keyframes loader2rect {
+  0% {
+    width: 30px;
   }
   25% {
-    transform: translate(43%, 0%);
+    width: 60px;
+    transform: translate(0%, 0%);
+  }
+  49% {
   }
   50% {
-    transform: translate(43%, 43%);
+    transform: translate(56%, 0%);
+    width: 30px;
   }
   75% {
-    transform: translate(0%, 43%);
+    width: 60px;
+    transform: translate(0%, 0%);
+  }
+  99% {
   }
   100% {
     transform: translate(0%, 0%);
-  }
-}
-
-.ldr2c2 {
-  animation: loaderCircle2 var(--loader-time-2) linear infinite;
-}
-
-@keyframes loaderCircle2 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  25% {
-    transform: translate(0%, 43%);
-  }
-  50% {
-    transform: translate(-43%, 43%);
-  }
-  75% {
-    transform: translate(-43%, 0%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-.ldr2c3 {
-  animation: loaderCircle3 var(--loader-time-2) linear infinite;
-}
-
-@keyframes loaderCircle3 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  25% {
-    transform: translate(0%, -43%);
-  }
-  50% {
-    transform: translate(43%, -43%);
-  }
-  75% {
-    transform: translate(43%, 0%);
-  }
-  100% {
-    transform: translate(0%, 0%);
-  }
-}
-.ldr2c4 {
-  animation: loaderCircle4 var(--loader-time-2) linear infinite;
-}
-
-@keyframes loaderCircle4 {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  25% {
-    transform: translate(-43%, 0%);
-  }
-  50% {
-    transform: translate(-43%, -43%);
-  }
-  75% {
-    transform: translate(0%, -43%);
-  }
-  100% {
-    transform: translate(0%, 0%);
+    width: 30px;
   }
 }
