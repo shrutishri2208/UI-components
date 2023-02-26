@@ -1,5 +1,6 @@
 import React from "react";
 import Arrow from "./components/Arrow";
+import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import Submit1 from "./components/Submit1";
 import Submit2 from "./components/Submit2";
@@ -19,6 +20,7 @@ function App() {
         <Arrow />
         <Loader />
       </div>
+      <Footer />
     </div>
   );
 }
