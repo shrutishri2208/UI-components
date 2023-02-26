@@ -379,14 +379,14 @@ code {
 }
 
 .white {
-  animation: white 0.5s linear;
+  animation: whiteColor 0.5s linear;
   animation-fill-mode: forwards;
 }
 .black {
-  animation: black 0.5s linear;
+  animation: blackColor 0.5s linear;
   animation-fill-mode: forwards;
 }
-@keyframes white {
+@keyframes whiteColor {
   0% {
     fill: black;
   }
@@ -397,7 +397,7 @@ code {
     fill: white;
   }
 }
-@keyframes black {
+@keyframes blackColor {
   0% {
     fill: white;
   }
