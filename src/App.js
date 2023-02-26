@@ -10,11 +10,11 @@ import Toggle from "./components/Toggle";
 function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="container flex flex-wrap justify-center gap-4">
         <Submit1 />
         <Submit2 />
-        <Submit3 />
         <Submit4 />
+        <Submit3 />
         <Loader />
         <Arrow />
         <Toggle />
