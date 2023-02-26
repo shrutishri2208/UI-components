@@ -33,7 +33,7 @@ const Toggle2 = () => {
           strokeWidth="1"
           strokeOpacity="0.5"
           stroke="#000"
-          fill="#000"
+          fill="red"
         />
         <circle
           className={`${state ? "black" : "white"}`}
