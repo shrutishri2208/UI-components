@@ -19,7 +19,6 @@ const Button1 = ({ loaderTime }) => {
     <div className=" flex justify-center">
       <button className="relative sub-btn-1" onClick={openLoader}>
         {isClicked && <LoaderSVG isClicked={isClicked} />}
-        {/* <Loader isClicked={isClicked} /> */}
         <span className="ml-2 mb-0.5">SUBMIT</span>
       </button>
     </div>
