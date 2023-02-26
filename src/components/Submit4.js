@@ -5,8 +5,8 @@ const loaderTime = 4000;
 
 const Submit4 = () => {
   return (
-    <div className="border-2 rounded-lg p-8 w-fit ">
-      <h1 className="mb-4">Loader on Click - 3</h1>
+    <div className="border-2 rounded-lg p-8 w-full ">
+      <h1 className="mb-4">Loader on Click - 4</h1>
       <div className="grid grid-cols-1">
         <Button9 loaderTime={loaderTime} />
       </div>

@@ -4,7 +4,7 @@ import Loader2 from "./Loader2";
 
 const Loader = () => {
   return (
-    <div className="border-2 rounded-lg p-8 grid grid-cols-2 gap-24">
+    <div className="border-2 rounded-lg p-8 grid grid-cols-2 gap-16">
       <Loader1 />
       <Loader2 />
     </div>
