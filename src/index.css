@@ -489,7 +489,7 @@ code {
 /*Loader - 2 */
 
 .loader2 {
-  animation: loader2 3s linear infinite alternate;
+  animation: loader2 3s linear infinite;
 }
 
 @keyframes loader2 {

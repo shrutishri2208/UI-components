@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Toggle2 = () => {
   const [state, setState] = useState(false);
   return (
-    <div onClick={() => setState(!state)} className="cursor-pointer w-1/4">
+    <div onClick={() => setState(!state)} className="cursor-pointer">
       <svg
         width="85"
         height="45"
