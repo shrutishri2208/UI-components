@@ -8,7 +8,7 @@ const Submit3 = () => {
   return (
     <div className="border-2 rounded-lg p-8 w-full">
       <h1 className="mb-4">Loader on Click - 3</h1>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 sub-3">
         <Button7 loaderTime={loaderTime} />
         <Button8 loaderTime={loaderTime} />
       </div>

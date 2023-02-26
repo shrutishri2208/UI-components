@@ -10,7 +10,7 @@ import Toggle from "./components/Toggle";
 function App() {
   return (
     <div className="App">
-      <div className="container grid grid-cols-2 gap-4">
+      <div className="container grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-4">
         <Submit1 />
         <Submit2 />
         <Submit3 />

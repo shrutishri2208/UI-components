@@ -10,7 +10,7 @@ const Loader2 = () => {
         viewBox="15 -4 50 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="loader2"
+        className="loader2 m-auto"
       >
         <rect
           className="bg"

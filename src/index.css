@@ -35,6 +35,7 @@ code {
   margin: auto;
   max-width: 90vw;
 }
+
 /*********************************************************************/
 
 /*Loader on Click - 1 */
@@ -413,6 +414,9 @@ code {
 
 /*Loader - 1*/
 
+.loader-1 {
+  left: 39%;
+}
 .shape1 {
   height: 5rem;
   width: 5rem;
@@ -527,5 +531,24 @@ code {
   100% {
     transform: translate(0%, 0%);
     width: 30px;
+  }
+}
+
+/*************************************************************************/
+@media screen and (max-width: 640px) {
+  body {
+    margin: 2rem;
+  }
+  .sub-1,
+  .sub-2,
+  .sub-3,
+  .toggle,
+  .arrows,
+  .loader-cont {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .toggle {
+    text-align: center;
   }
 }

@@ -12,6 +12,7 @@ const Toggle1 = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         strokeWidth="2"
+        className="m-auto mb-4"
       >
         <rect
           id="bg"

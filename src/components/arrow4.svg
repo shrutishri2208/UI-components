@@ -1,4 +1,4 @@
-<svg width="50" height="50" viewBox="0 0 87 74" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-arrow-2">
+<svg width="50" height="50" viewBox="0 0 87 74" fill="none" xmlns="http://www.w3.org/2000/svg" className="line-arrow-2 m-auto">
 <path id="Ellipse2" d="M85.5 37C85.5 56.5872 69.4013 72.5 49.5 72.5C29.5987 72.5 13.5 56.5872 13.5 37C13.5 17.4128 29.5987 1.5 49.5 1.5C69.4013 1.5 85.5 17.4128 85.5 37Z"   stroke-width="3"/>
 <line id="Line1" x1="0" y1="37.5" x2="30.5" y2="37.5"  stroke-width="3" stroke-linecap="round"/>
 <path id="arrow" d="M43 58L62.2845 37.8454M43.7155 17L63 37.1546"  stroke-width="3" stroke-linecap="round"/>
