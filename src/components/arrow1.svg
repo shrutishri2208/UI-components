@@ -4,7 +4,7 @@
             viewBox="0 30 100 10"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className=" arrow-container-1 m-auto mb-8"
+            className=" arrow-container-1 m-auto mb-8 arrow-1"
           >
             <g id="arrow">
               <path

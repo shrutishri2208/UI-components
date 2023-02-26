@@ -4,7 +4,7 @@ const Toggle1 = () => {
   const [state, setState] = useState(true);
 
   return (
-    <div onClick={() => setState(!state)} className="cursor-pointer">
+    <div onClick={() => setState(!state)} className="cursor-pointer toggle-1">
       <svg
         width="90"
         height="50"
